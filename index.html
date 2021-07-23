@@ -15,18 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.js"></script>
 
     <script>
-        window.model;
-        async function load_model(path) {
-        window.model = await model_utils.loadDTLN_model(path);
-        if (window.model) {
-        console.log("Model Loaded !!!!!");
-        } else {
-        console.error("Model Not Loaded !!!!!");
-        }
-        }
-        load_model("/static/models/dtln_tf_js_model_final_48k/model.json");
-    </script>
-    <script>
         // Dynamically generate the manifest location URL. It must be served from the document origin, and we may have
         // the base pointing to the CDN. This way we can generate a full URL which will bypass the base.
         document.querySelector('#manifest-placeholder').setAttribute('href', window.location.origin + '/manifest.json');
